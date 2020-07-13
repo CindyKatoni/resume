@@ -1,0 +1,264 @@
+/*Core Styles*/
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #fff;
+	color: #303030;
+	font-size: 1.1em;
+	line-height: 1.6;
+	text-align: center;
+}  
+
+.container{
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;/*the image will scale down if it has to, but never scale up to be larger than its original size*/
+    margin-bottom: 1em;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+	border-radius: 5px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+/*Typography*/
+h1, h2, h3, h5 {
+	line-height: 1;
+	margin: 0;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.25rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+.title {
+	margin-bottom: .25em;
+}
+
+.title--intro {
+	font-weight: lighter;
+}
+
+.title--intro strong {
+	display: block;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12);
+}
+.title--projects {
+    text-align: center;
+	color: aqua;
+	font-weight: bolder;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12);
+}
+.title--skills{
+    text-align: center;
+    color: #333333;
+    font-weight: bolder;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12);
+}
+
+.paragraph {
+	margin: 0;
+	font-size: 1rem;
+	background: #16e0bd;
+	padding: .25em 1em;
+	font-family: 'Source Code Pro', monospace;
+	margin-bottom: 1em;
+}
+
+.paragraph--intro {
+	padding-left: 5rem;
+	box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+	border-radius: 5px;
+}
+
+.paragraph--work {
+	margin: 0;
+	padding: 1em 0;
+	background: #fff;
+	font-family: Arial, sans-serif;
+}
+
+
+/*hr element*/
+h4 {
+    display: flex;
+    flex-direction: row;
+}
+h4:before, 
+h4:after { 
+    content: ""; 
+    flex: 1 1; 
+    border-bottom: 2px solid #DBFF33; 
+    /* margin: auto;  */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*Logo*/
+
+/*Intro Div*/
+.intro {
+	position: relative;
+}
+.intro__img {
+	box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+
+.paragraph--intro {
+	display: inline-block;
+}
+
+.paragraph--work {
+	margin: 0;
+	padding: 1em 0;
+	background: #fff;
+	font-family: Arial, sans-serif;
+}
+
+@media (min-width: 600px) {
+	.intro {
+		display: grid;
+		width: min-content;
+		margin: 0 auto;
+		grid-column-gap: 1em;
+		grid-template-areas: "img title" "img subtitle";
+		grid-template-columns: min-content max-content;
+	}
+	.intro__img {
+		grid-area: img;
+		min-width: 250px;
+		position: relative;
+		z-index: 2;
+
+
+	}
+	.paragraph--intro {
+		align-self: start;
+		grid-column: -1/1;
+		grid-row: 2;
+		text-align: center;
+		position: relative;
+		left: 11em;
+		width: calc(100%);
+	}
+}
+
+/*Projects Div*/
+.project_area{
+    display: inline-block;	
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    
+}
+
+#projects {
+	background: #333333;
+	padding: 2em 1em 1em;
+	border-radius: 5px;
+	box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+#projects ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#projects li {
+	margin-bottom: 2em;
+	background: #fff;
+	color: #333;
+	border-radius: 5px;
+}
+
+.work-content {
+	padding: 1.5em;
+}
+
+img {
+	width: 50% !important;
+	margin: auto !important;
+}
+
+/*Section B media query*/
+
+/*@media (min-width: 700px) {
+	grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	#projects ul {
+		grid-column: 2/4;
+		display: flex;
+		justify-content: space-around;
+	}
+	#projects li {
+		width: 31%;
+	}
+}
+.card-title {
+	font-size: 1.25rem;
+	line-height: 1;
+	font-family: Arial, sans-serif;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12);
+}*/
+
+/*Progress Bar*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
